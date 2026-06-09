@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajude o Guilherme o Boiadeiro - Barretos!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <h1>AJUDE O GUILHERME O BOIADEIRO A BRILHAR EM BARRETOS!</h1>
+            <p>O sonho dele é desfilar no maior rodeio do Brasil com um visual inesquecível: fivela rosa e chapéu rosa!</p>
+        </div>
+    </header>
+
+    <section class="destaque">
+        <div class="container grid">
+            <div class="photo-container">
+                <img src="guilherme.jpeg" alt="Guilherme o Boiadeiro" class="friend-photo">
+                <div class="glow-effect"></div>
+            </div>
+            <div class="text-block">
+                <h2>UMA FIVELA ROSA E UM SONHO GRANDE</h2>
+                <p>O Guilherme já chama atenção com seu estilo brilhante, mas para completar o traje oficial para Barretos, faltam as peças de destaque: uma fivela rosa marcante e um chapéu rosa incrível! Vamos dar essa força para ele representar com muito estilo.</p>
+                <div class="catchphrase">
+                    <p>"VIVA A VAQUEJADA, AQUI É DA ROÇA BEBÊ"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="doacao">
+        <div class="container text-center">
+            <h3>COMO AJUDAR?</h3>
+            <p>Faça uma doação de qualquer valor diretamente pelo PIX. Toda ajuda nos aproxima do objetivo!</p>
+            
+            <div class="pix-area">
+                <p><strong>CHAVE PIX:</strong></p>
+                <div class="pix-code" id="pixCode">44997740097</div>
+                <button onclick="copyPixCode()" class="btn-copy">Copiar Chave PIX</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center footer-content">
+            <p>&copy; 2026 Vaquinha do Guilherme "O Boiadeiro". Todos os direitos reservados.</p>
+            <p>Rumo ao Rodeio de Barretos 2026!</p>
+        </div>
+    </footer>
+
+    <img src="https://i.ibb.co/10b9M36/cow-pink-silhouette.png" alt="Boi Rosa" class="decor-icon boi-1">
+    <img src="https://i.ibb.co/10b9M36/cow-pink-silhouette.png" alt="Boi Rosa" class="decor-icon boi-2">
+    <img src="https://i.ibb.co/2N82hH3/horse-pink-silhouette.png" alt="Cavalo Rosa" class="decor-icon cavalo-1">
+    <img src="https://i.ibb.co/2N82hH3/horse-pink-silhouette.png" alt="Cavalo Rosa" class="decor-icon cavalo-2">
+
+    <script>
+        function copyPixCode() {
+            const pixCode = document.getElementById("pixCode").innerText;
+            navigator.clipboard.writeText(pixCode).then(() => {
+                alert("Chave PIX copiada com sucesso!");
+            }).catch(err => {
+                console.error("Erro ao copiar PIX: ", err);
+            });
+        }
+    </script>
+
+</body>
+</html>

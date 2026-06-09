@@ -1,0 +1,199 @@
+/* --- RESET E ESTILOS GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #ffeef6; /* Fundo rosa bem suave e limpo */
+    color: #2b2b2b;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Layout em duas colunas (Foto e Texto) */
+.grid {
+    display: block; /* Padrão para navegadores antigos e fluxo linear */
+}
+
+@media (min-width: 768px) {
+    .grid {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+    .photo-container, .text-block {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .photo-container {
+        width: 40%;
+        padding-right: 40px;
+    }
+    .text-block {
+        width: 60%;
+    }
+}
+
+/* --- TOPO / HEADER --- */
+header {
+    background-color: #ff2a93; /* Rosa Pink Forte */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 6px solid #d41370;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* --- SEÇÃO DESTAQUE COM A FOTO --- */
+.destaque {
+    padding: 50px 0;
+}
+
+.photo-container {
+    position: relative;
+    text-align: center;
+}
+
+.friend-photo {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 20px;
+    border: 6px solid #ff2a93;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.text-block h2 {
+    color: #d41370;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* Caixa Temática da Frase de Efeito */
+.catchphrase {
+    background-color: #d41370;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 30px;
+    transform: rotate(-2deg); /* Charme rústico de placa da roça */
+    box-shadow: 4px 4px 0px #2b2b2b;
+}
+
+.catchphrase p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* --- SEÇÃO DO PIX --- */
+.doacao {
+    background-color: white;
+    padding: 50px 0;
+    border-top: 4px solid #ff2a93;
+    border-bottom: 4px solid #ff2a93;
+}
+
+.doacao h3 {
+    color: #ff2a93;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.pix-area {
+    background-color: #fff0f7;
+    padding: 25px;
+    border-radius: 16px;
+    display: inline-block;
+    margin-top: 20px;
+    border: 3px dashed #ff2a93;
+}
+
+.pix-code {
+    background-color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2b2b2b;
+    margin-bottom: 15px;
+    border: 1px solid #ffb3d9;
+}
+
+.btn-copy {
+    background-color: #ff2a93;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 42, 147, 0.3);
+}
+
+.btn-copy:hover {
+    background-color: #d41370;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: #222;
+    color: #999;
+    padding: 25px 20px;
+}
+
+footer p {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+/* --- ELEMENTOS DECORATIVOS DE ANIMAIS (ROSA) --- */
+.decor-icon {
+    position: absolute;
+    width: 70px;
+    opacity: 0.25; /* Discreto para não atrapalhar a leitura */
+    z-index: 1;
+}
+
+.boi-1 { top: 180px; left: 15px; transform: rotate(15deg); }
+.boi-2 { bottom: 150px; right: 15px; transform: scaleX(-1) rotate(-15deg); }
+.cavalo-1 { top: 45%; right: 25px; transform: rotate(-10deg); }
+.cavalo-2 { bottom: 450px; left: 25px; transform: rotate(10deg); }
+
+/* Ajustes de tela para celular */
+@media (max-width: 767px) {
+    .text-block {
+        text-align: center;
+    }
+    header h1 { font-size: 1.7rem; }
+    .catchphrase p { font-size: 1.1rem; }
+    .pix-code { font-size: 1.1rem; }
+    .decor-icon { width: 50px; opacity: 0.15; }
+}
